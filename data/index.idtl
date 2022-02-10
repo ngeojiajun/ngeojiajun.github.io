@@ -1,0 +1,21 @@
+###page_title
+Welcome to Ngeo Jia Jun's personal page
+###
+###page_unit_path
+This page represent the biodata of individual named Ngeo Jia Jun
+###
+###head_append
+<style media="screen">
+div.box{
+  border: black solid 1px;
+  background:background:rgb(255, 166, 251);
+}
+</style>
+###
+#####
+<div class="box intro">
+  <h1>Hi, I am Ngeo Jia Jun</h1>
+  Hi to everyone that found this, a great welcome is directed to you from me. I am Ngeo Jia Jun which are currently
+  pursuing the Degree course on Bachelor of Multimedia and Computing (BMC) in <a href="https://www.kolejypc.edu.my">YPC International College</a>.
+  In this website, I will reveal some details about myself through the link on the navigation bar.
+</div>
