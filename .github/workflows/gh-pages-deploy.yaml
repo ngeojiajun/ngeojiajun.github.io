@@ -15,7 +15,7 @@ jobs:
           node-version: '16'
           cache: 'npm'
       - name: Installing dependencies
-        run: npm install
+        run: npm install --loglevel verbose
       - name: Generating the pages
         run: npm run build
       - name: Deploy
