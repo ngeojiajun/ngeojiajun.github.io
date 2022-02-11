@@ -2,28 +2,16 @@
 Welcome to Ngeo Jia Jun's personal page
 ###
 ###page_description
-This page represent the biodata of individual named Ngeo Jia Jun
+This page represent the biodata of him
 ###
 ###page_keywords
 Jia Jun Ngeo, Biodata
-###
-###head_append
-<style media="screen">
-div.box{
-  border: black solid 1px;
-  background:rgb(255, 166, 251);
-  margin-bottom:30px;
-}
-table td{
-  border: black solid 2px;
-}
-</style>
 ###
 #####
 <div class="box intro">
   <h1>Hi, I am Ngeo Jia Jun</h1>
   Hi to everyone that found this, a great welcome is directed to you from me. I am Ngeo Jia Jun which are currently
-  pursuing the Degree course on Bachelor of Multimedia and Computing (BMC) in <a href="https://www.ypccollege.edu.my/">YPC International College</a>.
+  pursuing the Degree course on Bachelor of Multimedia and Computing (BMC) in <a href="https://www.ypccollege.edu.my/" target="_blank">YPC International College</a>.
   In this website, I will reveal some details about myself through the links on the navigation bar.
 </div>
 <div class="box biodata">
@@ -46,7 +34,7 @@ table td{
       </tr>
       <tr>
         <td>Contact</td>
-        <td>n.jiajun@ypccollege.edu.my</td>
+        <td><a href="mailto:n.jiajun@ypccollege.edu.my">n.jiajun@ypccollege.edu.my</a></td>
       </tr>
       <tr>
         <td>Highest education level (as 2022)</td>
@@ -54,4 +42,9 @@ table td{
       </tr>
     </tbody>
   </table>
+</div>
+<div class="box images">
+  <h2>Profile images</h2>
+  <img src="/imgs/IMG_20190706_113613.jpg" alt="Ngeo Jia Jun on 2019"/>
+  <img src="/imgs/IMG-20211223-WA0012.jpg" alt="Ngeo Jia Jun on 2021"/>
 </div>

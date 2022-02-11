@@ -1,11 +1,10 @@
 {
   "devDependencies": {
-    "gh-pages": "^3.2.3"
+    "express": "^4.17.2"
   },
   "scripts": {
     "build": "ejs-site-generator",
-    "predeploy": "npm run build",
-    "deploy": "gh-pages -d out"
+    "serve": "node serve.js"
   },
   "dependencies": {
     "@ngeojiajun/ejs-site-generator": "^3.0.0"
