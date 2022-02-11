@@ -7,6 +7,6 @@
     "serve": "node serve.js"
   },
   "dependencies": {
-    "@ngeojiajun/ejs-site-generator": "^3.0.0"
+    "@ngeojiajun/ejs-site-generator": "^4.0.0"
   }
 }
