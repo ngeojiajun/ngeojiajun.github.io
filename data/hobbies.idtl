@@ -1,0 +1,31 @@
+###page_title
+Hobbies
+###
+###page_description
+This page describes his hobby
+###
+### head_append
+<style media="screen">
+  details{
+    background:rgb(255, 166, 251);
+    margin-bottom:30px;
+  }
+</style>
+###
+#####
+My hobbies are primarily divided into three major areas:
+<br>
+<details>
+  <summary>Anime, Manga and Games</summary>
+  When I free, I spent the majority of my time in enjoying those stuffs. It is become my primary hobby
+  since my exposure toward the Japanese language since I am 17. <br>
+  More on this later
+</details>
+<details>
+  <summary>Learning Japanese</summary>
+  <i>Work in progress</i>
+</details>
+<details>
+  <summary>Programming</summary>
+  <i>Work in progress</i>
+</details>

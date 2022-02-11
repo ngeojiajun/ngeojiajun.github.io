@@ -10,6 +10,9 @@ function include_external_tagging(){
     return "";
   }
 }
+function generateLink(name,path){
+  return `<a class="nav-link ${page_unit_path==path?"active":""}" aria-current="page" href="/${path}.html">${name}</a>`;
+}
 _%>
 <!doctype html>
 <html>
@@ -47,7 +50,10 @@ _%>
       <div class="collapse navbar-collapse" id="navbarSupportedContent">
         <ul class="navbar-nav me-auto mb-2 mb-lg-0">
           <li class="nav-item">
-            <a class="nav-link <%=page_unit_path=="index"?"active":""_%>" aria-current="page" href="index.html">Home</a>
+            <%-generateLink("Home","index"); _%>
+          </li>
+          <li class="nav-item">
+            <%-generateLink("Hobby","hobbies"); _%>
           </li>
         </ul>
       </div>
