@@ -11,7 +11,11 @@ Jia Jun Ngeo, Biodata
 <style media="screen">
 div.box{
   border: black solid 1px;
-  background:background:rgb(255, 166, 251);
+  background:rgb(255, 166, 251);
+  margin-bottom:30px;
+}
+table td{
+  border: black solid 2px;
 }
 </style>
 ###
