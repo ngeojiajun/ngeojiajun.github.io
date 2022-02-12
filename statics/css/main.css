@@ -35,3 +35,6 @@ details{
 details summary{
   margin-bottom:5px;
 }
+form.stretch input{
+  width:100%;
+}

@@ -1,0 +1,64 @@
+###page_title
+Comments
+###
+###page_description
+This page contain the comments that users have written in this site
+###
+###page_keywords
+Comments
+###
+#####
+<div class="box comments">
+  <h1>Comments</h1>
+  <!--Todo: add post-->
+  <div class="box">
+    <p>Post your comment:</p>
+    <form class="stretch" onsubmit="return handleForm(this)">
+      Name:<br>
+      <input type="text" placeholder="Name" name="name"><br>
+      Comment:<br>
+      <input type="text" placeholder="Comment" name="comment"><br>
+      <input type="submit" name="submit" value="Post"/>
+    </form>
+  </div>
+  <%
+  const comments=Interops.loadComments().comments;
+  for(const id in comments){
+    const comment=comments[id];
+   _%>
+  <div class="box">
+    <h3><%=comment.name; _%>&nbsp;says:</h3>
+    <p>On: <%=new Date(comment.timestamp).toLocaleString("ja-JP",{timezone:"Tokyo"})%></p>
+    <%=comment.comment; _%>
+  </div>
+  <%}_%>
+</div>
+<script type="text/javascript">
+  function handleForm(form){
+    //create the request and post it
+    //recreate the form in js
+    form.submit.disabled=true;
+    const data = new URLSearchParams();
+    const fields=["name","comment"];
+    fields.forEach((item) => {
+      data.append(item,form[item].value);
+      form[item].value="";
+    });
+    //send the actual request
+    fetch("<%=process.env.COMMENTS_WRITE%>",{
+      body:data,
+      method:"POST"
+    }).then((res)=>res.json())
+    .then(e=>{
+      if(e.status=="OK"){
+        alert("Succeeded: Your post will be visible within 24 hours");
+      }
+      else{
+        alert(e.status);
+      }
+    })
+    .catch(e=>alert(`Error has occured:${e}`))
+    .finally(()=>form.submit.disabled=false);
+    return false;
+  }
+</script>
