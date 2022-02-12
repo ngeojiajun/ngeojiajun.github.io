@@ -18,6 +18,11 @@ jobs:
           cache: 'npm'
       - name: Installing dependencies
         run: npm install --loglevel verbose
+      - name: Initializating the build env
+        run: |
+          touch .env
+          echo COMMENTS_READ =${{ secrets.COMMENTS_READ }} >> .env
+          echo COMMENTS_WRITE =${{ secrets.COMMENTS_WRITE }} >> .env
       - name: Generating the pages
         run: npm run build
       - name: Deploy
