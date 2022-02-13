@@ -59,6 +59,11 @@ Comments
     })
     .catch(e=>alert(`Error has occured:${e}`))
     .finally(()=>form.submit.disabled=false);
+    //send the google analytics event on comment
+    gtag('event', "comment", {
+      'event_category': "engagement",
+      'event_label': "method"
+    });
     return false;
   }
 </script>
