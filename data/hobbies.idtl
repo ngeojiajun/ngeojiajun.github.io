@@ -4,21 +4,42 @@ Hobbies
 ###page_description
 This page describes his hobby
 ###
+###page_keywords
+hobby, hobbies, programming
+###
 #####
 <div class="box">
-My hobbies are primarily divided into three major areas:
+My hobbies are primarily divided into these major areas:
 <details>
   <summary>Anime, Manga and Games</summary>
   When I free, I spent the majority of my time in enjoying those stuffs. It is become my primary hobby
   since my exposure toward the Japanese language since I am 17. <br>
-  More on this later
-</details>
-<details>
-  <summary>Learning Japanese</summary>
-  <i>Work in progress</i>
+  Currently the genre that I am really into are the following: <br>
+  <ul>
+    <li>School Love</li>
+    <li>Shoujo (少女) </li>
+    <li>Josei (女性) </li>
+    <li>Slice of Life (日常系)</li>
+    <li>Iyashikei (癒やし系)</li>
+  </ul>
+  For games, I have played numerous gacha games such as Love Live! School idol festival in the past
+  however due to the time constraint that happened as result of the tight schedule I have decided to
+  abandoned it. The recently I have decided to continue the Genshin Impact that I have abandoned in the past.
 </details>
 <details>
   <summary>Programming</summary>
-  <i>Work in progress</i>
+  In the span of eight years, I have experienced and gained the knowledges in the following languages.
+  <ul>
+    <li>C</li>
+    <li>C++</li>
+    <li>Java</li>
+    <li>HTML</li>
+    <li>JavaScript</li>
+    <li>PHP</li>
+    <li>SQL</li>
+  </ul>
+  In overall the programming is not difficult, but rather I am having some fun with the programming whilist it
+  is challenging in certain extent. For example, it is always stressful to see a lot of bugs but it is also a
+  thrilling yet rewarding experience to find the information and actually solve the problem.
 </details>
 </div>

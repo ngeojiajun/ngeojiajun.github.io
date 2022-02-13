@@ -1,0 +1,16 @@
+###page_title
+Contact me
+###
+###page_description
+This page shows the contact information of him
+###
+###page_keywords
+contact info, facebook, instagram, linkedin
+###
+#####
+<div class="box">
+  <h1>Contact me</h1>
+  <p>You can contact me using the following links</p>
+  <a href="https://www.linkedin.com/in/ngeojiajun/"><img src="/imgs/LinkedIn_Logo.png" alt="Linkedin Logo" class="icon"></a>
+  <a href="https://www.facebook.com/junichi.000909/"><img src="/imgs/facebook_icon.png" alt="Facebook Icon"></a>
+</div>

@@ -36,6 +36,11 @@ details{
 details summary{
   margin-bottom:5px;
 }
+/**comment page*/
 form.stretch input{
   width:100%;
+}
+/*icon under box*/
+div.box img.icon{
+  height:100px;
 }

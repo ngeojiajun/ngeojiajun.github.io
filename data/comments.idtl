@@ -51,7 +51,7 @@ Comments
     }).then((res)=>res.json())
     .then(e=>{
       if(e.status=="OK"){
-        alert("Succeeded: Your post will be visible within 24 hours");
+        alert("Succeeded: Your post will be visible within 8 hours");
       }
       else{
         alert(e.status);

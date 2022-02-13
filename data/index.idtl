@@ -14,6 +14,15 @@ Jia Jun Ngeo, Biodata
   pursuing the Degree course on Bachelor of Multimedia and Computing (BMC) in <a href="https://www.ypccollege.edu.my/" target="_blank">YPC International College</a>.
   In this website, I will reveal some details about myself through the links on the navigation bar.
 </div>
+<div class="box specialize">
+  <h2>Working on:</h2>
+  <ul>
+    <li>C++ software development</li>
+    <li>Web development</li>
+    <li>Backend development</li>
+    <li>Nodejs development</li>
+  </ul>
+</div>
 <div class="box biodata">
   <h2>Biodata</h2>
   <table>
@@ -33,7 +42,7 @@ Jia Jun Ngeo, Biodata
         <td>9 September 2000</td>
       </tr>
       <tr>
-        <td>Contact</td>
+        <td>E-mail address:</td>
         <td><a href="mailto:n.jiajun@ypccollege.edu.my">n.jiajun@ypccollege.edu.my</a></td>
       </tr>
       <tr>
@@ -42,6 +51,10 @@ Jia Jun Ngeo, Biodata
       </tr>
     </tbody>
   </table>
+</div>
+<div class="box past-experience">
+  <h2>Past experience</h2>
+  My only experience working outside is with <a href="https://www.kyochon.com.my/careers/">Kyochon</a> on year 2021.
 </div>
 <div class="box images">
   <h2>Profile images</h2>
