@@ -17,6 +17,7 @@ div.box a{
   color: var(--link-color);
 }
 div.box img{
+  max-width:90%;
   max-height:250px;
   width: auto;
   height: auto;
