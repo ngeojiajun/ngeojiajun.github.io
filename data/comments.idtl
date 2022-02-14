@@ -5,7 +5,7 @@ Comments
 This page contain the comments that users have written in this site
 ###
 ###page_keywords
-Comments
+Jia Jun Ngeo, Comments
 ###
 #####
 <div class="box comments">
@@ -67,4 +67,3 @@ Comments
     return false;
   }
 </script>
-<!--Whatever-->
