@@ -28,7 +28,7 @@ Comments
    _%>
   <div class="box">
     <h3><%=comment.name; _%>&nbsp;says:</h3>
-    <p>On: <%=new Date(comment.timestamp).toLocaleString("ja-JP",{timezone:"Tokyo"})%></p>
+    <p>On: <%=new Date(comment.timestamp).toLocaleString("ja-JP",{timezone:"Tokyo"})%>JST</p>
     <%=comment.comment; _%>
   </div>
   <%}_%>
@@ -67,3 +67,4 @@ Comments
     return false;
   }
 </script>
+<!--Whatever-->
