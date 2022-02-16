@@ -1,8 +1,5 @@
 name: Google search update
 on:
-  push:
-    branches:
-      - gh-pages
   schedule:
     - cron: '50 0 * * 5'
 jobs:
