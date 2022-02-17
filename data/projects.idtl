@@ -1,0 +1,38 @@
+###page_title
+Projects
+###
+###page_description
+This page describes project he have done before
+###
+###page_keywords
+Jia Jun Ngeo, Projects
+###
+#####
+<div class="box">
+  <details>
+    <summary>E-Portfolio</summary>
+    This website is built on Semester 2 as the submission for the coursework of
+    Internet and Web Technologies subject. Its goal is to provide user information on ourselves.
+    It is built on HTML and JS using the modern Document Object Model (DOM) APIs such as the User Media and Promises.
+    <br>
+    <img src="/imgs/eportfolio.png" alt="Screenshot of the portfolio">
+  </details>
+  <details>
+    <summary>Personal Blog</summary>
+    This web application is built on August 2020 as a practise on the server side scripting and the Bootstrap framework.
+    <br>
+    The entire application is split into two major areas:
+    <ul>
+      <li>Text files which represents the content</li>
+      <li> JavaScript files which parse and generate the htmls to serve the visitors</li>
+    </ul>
+    The application have underdone two times of refactors:
+    <ul>
+      <li> A change to the script to build all the html files to deploy to static site hosting provider, <a href="https://www.netlify.com/" target="_blank">Netlify</a></li>
+      <li> A complete separation of the data layor and view layer by making use of the MVC framework such as Vue.</li>
+    </ul>
+    The application is current hosted at <a href="https://junichi2000.jp.eu.org" target="_blank">here</a> (Japanese).
+    <br>
+    <img src="/imgs/blog.png" alt="Screenshot of the blog application">
+  </details>
+</div>
