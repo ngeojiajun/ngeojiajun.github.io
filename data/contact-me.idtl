@@ -11,6 +11,14 @@ Jia Jun Ngeo, contact info, facebook, linkedin
 <div class="box">
   <h1>Contact me</h1>
   <p>You can contact me using the following links</p>
-  <a href="https://www.linkedin.com/in/ngeojiajun/"><img src="/imgs/LinkedIn_Logo.png" alt="Linkedin Logo" class="icon"></a>
-  <a href="https://www.facebook.com/junichi.000909/"><img src="/imgs/facebook_icon.png" alt="Facebook Icon"></a>
+  <table>
+    <tr>
+      <td>LinkedIn</td>
+      <td><a href="https://www.linkedin.com/in/ngeojiajun/"><img src="/imgs/LinkedIn_Logo.png" alt="Linkedin Logo" class="icon"></a></td>
+    </tr>
+    <tr>
+      <td>Facebook</td>
+      <td><a href="https://www.facebook.com/junichi.000909/"><img src="/imgs/facebook_icon.png" alt="Facebook Icon" class="icon"></a></td>
+    </tr>
+  </table>
 </div>
