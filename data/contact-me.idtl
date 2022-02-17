@@ -14,11 +14,11 @@ Jia Jun Ngeo, contact info, facebook, linkedin
   <table>
     <tr>
       <td>LinkedIn</td>
-      <td><a href="https://www.linkedin.com/in/ngeojiajun/"><img src="/imgs/LinkedIn_Logo.png" alt="Linkedin Logo" class="icon"></a></td>
+      <td><a href="https://www.linkedin.com/in/ngeojiajun/" target="_blank"><img src="/imgs/LinkedIn_Logo.png" alt="Linkedin Logo" class="icon"></a></td>
     </tr>
     <tr>
       <td>Facebook</td>
-      <td><a href="https://www.facebook.com/junichi.000909/"><img src="/imgs/facebook_icon.png" alt="Facebook Icon" class="icon"></a></td>
+      <td><a href="https://www.facebook.com/junichi.000909/" target="_blank"><img src="/imgs/facebook_icon.png" alt="Facebook Icon" class="icon"></a></td>
     </tr>
   </table>
 </div>
