@@ -35,4 +35,14 @@ Jia Jun Ngeo, Projects
     <br>
     <img src="/imgs/blog.png" alt="Screenshot of the blog application">
   </details>
+  <details>
+    <summary>Music Dance</summary>
+    This is the game that created on November 2021 for the Advanced Multimedia subject coursework. The goal of this
+    game is simple, collect nodes as much as possible while avoiding the bombs. This game make use of the CanvasRenderingContext2D
+    API in rendering the scene. The entire game rendering are completely done through the JavaScript. HTML and CSS are
+    used merely to provide the hosting for the canvas. Through the entire development process, the proper error handing has
+    been the most critical part in order the ensure the good user experience. The development finished within a month.
+    <img src="/imgs/game-menu.png" alt="Screenshot of Game menu">
+    <img src="/imgs/game-screen.png" alt="Screenshot of Game screen"> 
+  </details>
 </div>
