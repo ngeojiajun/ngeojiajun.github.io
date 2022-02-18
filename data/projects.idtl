@@ -9,7 +9,7 @@ Jia Jun Ngeo, Projects
 ###
 #####
 <div class="box">
-  <details>
+  <details open>
     <summary>E-Portfolio</summary>
     This website is built on Semester 2 as the submission for the coursework of
     Internet and Web Technologies subject. Its goal is to provide user information on ourselves.
