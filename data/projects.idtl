@@ -42,7 +42,8 @@ Jia Jun Ngeo, Projects
     API in rendering the scene. The entire game rendering are completely done through the JavaScript. HTML and CSS are
     used merely to provide the hosting for the canvas. Through the entire development process, the proper error handing has
     been the most critical part in order the ensure the good user experience. The development finished within a month.
+    <br>
     <img src="/imgs/game-menu.png" alt="Screenshot of Game menu">
-    <img src="/imgs/game-screen.png" alt="Screenshot of Game screen"> 
+    <img src="/imgs/game-screen.png" alt="Screenshot of Game screen">
   </details>
 </div>
