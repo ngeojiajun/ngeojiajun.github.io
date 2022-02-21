@@ -9,10 +9,14 @@ exports.hooks={
     urls.push(name);
   },
   build_done:function(){
+    //xml version
     let base=`<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n`;
     urls.unshift("");
     base+=urls.map(e=>`<url>\n<loc>https://ngeojiajun.github.io/${e}</loc>\n</url>`).join("\n");
     base+="\n</urlset>";
     fs.writeFileSync("./out/sitemap.xml",base);
+    //txt version
+    let final=urls.map(e=>`https://ngeojiajun.github.io/${e}`).join("\n");
+    fs.writeFileSync("./out/sitemap.txt",base);
   }
 }
