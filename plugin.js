@@ -17,6 +17,6 @@ exports.hooks={
     fs.writeFileSync("./out/sitemap.xml",base);
     //txt version
     let final=urls.map(e=>`https://ngeojiajun.github.io/${e}`).join("\n");
-    fs.writeFileSync("./out/sitemap.txt",base);
+    fs.writeFileSync("./out/sitemap.txt",final);
   }
 }
