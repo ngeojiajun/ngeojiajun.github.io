@@ -3,13 +3,13 @@
 //cache list
 const cachesList={
   //files here are never changed except there are major changes happen
-  'always-v0':[
+  'always-v1':[
     '/css/main.css',
     '/imgs/code-background.png',
     '/js/detail-shim.js'
   ],
   //files here are never changed but only will be fetched when needed
-  'always-on-demand-v0':[
+  'always-on-demand-v1':[
     '/img/blog.png',
     '/img/eportfolio.png',
     '/img/facebook_icon.png',
@@ -27,8 +27,8 @@ const cachesList={
 
 const cacheNames=Object.keys(cachesList);
 
-const ALWAYS_CACHED_KEY="always-v0";
-const ALWAYS_CACHED_ON_DEMAND_KEY="always-on-demand-v0";
+const ALWAYS_CACHED_KEY=cacheNames.filter(y=>y.startsWith("always-v"))[0];
+const ALWAYS_CACHED_ON_DEMAND_KEY=cacheNames.filter(y=>y.startsWith("always-on-demand-v"))[0];
 const LIVE_PREFERRED_KEY="live-prefer-<%=Interops.git_commit();_%>";
 const CACHED_PREFERRED_KEY="cached-prefer-<%=Interops.git_commit();_%>";
 
