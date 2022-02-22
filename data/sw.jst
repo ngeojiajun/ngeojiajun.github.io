@@ -1,0 +1,116 @@
+//Service worker for Jia Jun's site
+//v1
+//cache list
+const cachesList={
+  //files here are never changed except there are major changes happen
+  'always-v0':[
+    '/css/main.css',
+    '/imgs/code-background.png',
+    '/js/detail-shim.js'
+  ],
+  //files here are never changed but only will be fetched when needed
+  'always-on-demand-v0':[
+    '/img/blog.png',
+    '/img/eportfolio.png',
+    '/img/facebook_icon.png',
+    '/img/game-menu.png',
+    '/img/game-screen.png',
+    '/img/LinkedIn_Logo.png',
+    '/img/IMG_20190706_113613.jpg',
+    '/img/IMG_20211223-WA0012.jpg'
+  ],
+  'live-prefer-<%=Interops.git_commit();_%>':[
+    '/comments.html'
+  ],
+  'cached-prefer-<%=Interops.git_commit();_%>':true
+}
+
+const cacheNames=Object.keys(cachesList);
+
+const ALWAYS_CACHED_KEY="always-v0";
+const ALWAYS_CACHED_ON_DEMAND_KEY="always-on-demand-v0";
+const LIVE_PREFERRED_KEY="live-prefer-<%=Interops.git_commit();_%>";
+const CACHED_PREFERRED_KEY="cached-prefer-<%=Interops.git_commit();_%>";
+
+function timeLimited(pros,limit){
+  return Promise.race([pros,new Promise((_,reject)=>setTimeout(reject,limit))]);
+}
+
+self.addEventListener('install', function(event) {
+  //cache all the files under always-v prefix
+  const key=ALWAYS_CACHED_KEY;
+  event.waitUntil(
+    caches.open(key)
+      .then(function(cache) {
+        console.log(`Opened cache ${key}`);
+        return cache.addAll(cachesList[key]);
+      })
+  );
+});
+
+self.addEventListener('fetch', function(event) {
+  //user fetchs the page
+  //ignore the request if the base url is not our scope
+  if(!event.request.url.startsWith(self.registration.scope)){
+    return;
+  }
+  //get the relative url
+  let url=event.request.url.replace(self.registration.scope,"/");
+  if(cachesList[LIVE_PREFERRED_KEY].includes(url)){
+    //the url is preferred to be fetch online first then only offline as
+    //fallback
+    let task=caches.open(LIVE_PREFERRED_KEY).then(function(cache) {
+      return fetch(event.request).then(
+        function(response){
+          cache.put(event.request, response.clone());
+          return response;
+        }
+      )
+    })
+    event.respondWith(
+      //allow the live http fetch to be attempted at most 5 sec
+      //otherwise match the cache directly
+      timeLimited(task,5000).catch(()=>caches.match(event.request).then(r=>r||task))
+    );
+  }
+  else{
+    //try cache or fetch it
+    event.respondWith(
+      caches.match(event.request)
+        .then(function(response) {
+          // Cache hit - return response
+          if (response) {
+            return response;
+          }
+          //get the store it belongs
+          const store=cachesList[ALWAYS_CACHED_ON_DEMAND_KEY].includes(url)?
+                      ALWAYS_CACHED_ON_DEMAND_KEY:
+                      CACHED_PREFERRED_KEY;
+          return caches.open(store).then(function(cache) {
+            return fetch(event.request).then(
+              function(response){
+                cache.put(event.request, response.clone());
+                return response;
+              }
+            )
+          });
+        }
+      )
+    );
+  }
+});
+
+self.addEventListener('activate', function(event) {
+  console.log("Removing old caches")
+  event.waitUntil(
+    caches.keys().then(function(storeNames) {
+      return Promise.all(
+        storeNames.filter(function(cacheName) {
+          return cacheNames.includes(cacheName)
+        }).map(function(cacheName) {
+          return caches.delete(cacheName);
+        })
+      );
+    })
+  );
+});
