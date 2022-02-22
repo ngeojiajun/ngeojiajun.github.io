@@ -108,7 +108,7 @@ self.addEventListener('activate', function(event) {
     caches.keys().then(function(storeNames) {
       return Promise.all(
         storeNames.filter(function(cacheName) {
-          return cacheNames.includes(cacheName)
+          return !cacheNames.includes(cacheName)
         }).map(function(cacheName) {
           return caches.delete(cacheName);
         })
