@@ -3,10 +3,12 @@
 //cache list
 const cachesList={
   //files here are never changed except there are major changes happen
-  'always-v1':[
+  'always-v2':[
     '/css/main.css',
     '/imgs/code-background.png',
-    '/js/detail-shim.js'
+    '/js/detail-shim.js',
+    '/css/bootstrap.min.css',
+    '/js/bootstrap.bundle.min.js'
   ],
   //files here are never changed but only will be fetched when needed
   'always-on-demand-v1':[
@@ -44,7 +46,7 @@ self.addEventListener('install', function(event) {
       .then(function(cache) {
         console.log(`Opened cache ${key}`);
         return cache.addAll(cachesList[key]);
-      })
+      }).then(y=>console.log("Installation done"))
   );
 });
 
