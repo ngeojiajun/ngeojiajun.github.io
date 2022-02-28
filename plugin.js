@@ -15,6 +15,7 @@ exports.hooks={
     base+=urls.map(e=>`<url>\n<loc>https://ngeojiajun.github.io/${e}</loc>\n</url>`).join("\n");
     base+="\n</urlset>";
     fs.writeFileSync("./out/sitemap.xml",base);
+  }
 }
 //get effective commit of the tree
 //since the tree always clean in CI so we can ignore the fact that the tree might be
