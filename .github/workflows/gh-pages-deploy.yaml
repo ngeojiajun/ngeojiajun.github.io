@@ -38,7 +38,7 @@ jobs:
     if: ${{github.event_name == 'push'}}
     steps:
       - name: Wait for the deployment
-        run: sleep 120
+        run: sleep 60
       - name: Google
         run: curl 'https://www.google.com/ping?sitemap=https%3A%2F%2Fngeojiajun.github.io%2Fsitemap.xml'
 #        - name: Bing
