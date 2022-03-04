@@ -1,0 +1,29 @@
+###page_title
+Friends
+###
+###page_description
+This page show the list of his friends
+###
+###page_keywords
+Jia Jun Ngeo, Friend
+###
+#####
+<div class="box">
+  Here is the list of mt friends which currently studying the same programme too. Please check them out :-)
+  <table>
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>URL</th>
+      </tr>
+      <tr>
+        <td>Chong Jia Yuen</td>
+        <td><a href="https://miragewing.github.io/personal_website.io/">https://miragewing.github.io/personal_website.io/</a></td>
+      </tr>
+      <tr>
+        <td>Keoy Shon Tzu</td>
+        <td><a href="https://yuuchin.github.io/ycPortfolio/">https://yuuchin.github.io/ycPortfolio/</a></td>
+      </tr>
+    </thead>
+  </table>
+</div>

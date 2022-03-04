@@ -28,8 +28,8 @@ Jia Jun Ngeo, Biodata
   <table>
     <thead>
       <tr>
-        <td>Item</td>
-        <td>Detail</td>
+        <th>Item</th>
+        <th>Detail</th>
       </tr>
     </thead>
     <tbody>
