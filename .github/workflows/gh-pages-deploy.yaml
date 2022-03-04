@@ -31,19 +31,19 @@ jobs:
           jekyll: false
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-          
-    sitemap-publish:
-      runs-on: ubuntu-latest
-      needs: build-ejs-site
-      if: ${{github.event_name == 'push'}}
-      steps:
-        - name: Wait for the deployment
-          uses: lewagon/wait-on-check-action@v1.0.0
-          with:
-            ref: ${{ github.ref }}
-            check-name: ''
-            repo-token: ${{ secrets.GITHUB_TOKEN }}
-        - name: Google
-          run: curl 'https://www.google.com/ping?sitemap=https%3A%2F%2Fngeojiajun.github.io%2Fsitemap.xml'
+
+  sitemap-publish:
+    runs-on: ubuntu-latest
+    needs: build-ejs-site
+    if: ${{github.event_name == 'push'}}
+    steps:
+      - name: Wait for the deployment
+        uses: lewagon/wait-on-check-action@v1.0.0
+        with:
+          ref: ${{ github.ref }}
+          check-name: ''
+          repo-token: ${{ secrets.GITHUB_TOKEN }}
+      - name: Google
+        run: curl 'https://www.google.com/ping?sitemap=https%3A%2F%2Fngeojiajun.github.io%2Fsitemap.xml'
 #        - name: Bing
 #          run: curl 'https://www.bing.com/ping?sitemap=https%3A%2F%2Fngeojiajun.github.io%2Fsitemap.xml'
