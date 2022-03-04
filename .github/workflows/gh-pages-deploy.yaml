@@ -41,7 +41,7 @@ jobs:
         uses: lewagon/wait-on-check-action@v1.0.0
         with:
           ref: ${{ github.ref }}
-          check-name: ''
+          check-name: 'pages build and deployment'
           repo-token: ${{ secrets.GITHUB_TOKEN }}
       - name: Google
         run: curl 'https://www.google.com/ping?sitemap=https%3A%2F%2Fngeojiajun.github.io%2Fsitemap.xml'

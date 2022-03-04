@@ -39,6 +39,8 @@ function timeLimited(pros,limit){
 }
 
 self.addEventListener('install', function(event) {
+ //install it now without wait
+  self.skipWaiting();
   //cache all the files under always-v prefix
   const key=ALWAYS_CACHED_KEY;
   event.waitUntil(
