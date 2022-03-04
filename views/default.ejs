@@ -73,6 +73,15 @@ _%>
           <li class="nav-item">
             <%-generateLink("Contact me","contact-me"); _%>
           </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link <%=page_unit_path.startsWith("fun_with_programming")?"active ":""_%> dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+              Fun with programming
+            </a>
+            <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+              <li><a class="dropdown-item" href="/fun_with_programming/">Introduction</a></li>
+              <li><a class="dropdown-item" href="/fun_with_programming/reflection-under-ue-4-27.html">Reflection under UE 4.27</a></li>
+            </ul>
+          </li>
         </ul>
       </div>
     </div>
@@ -85,20 +94,20 @@ _%>
       </div>
       <div class="col-sm-1 p-3"></div>
     </div>
-<script src="/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
-<script type="text/javascript">
-  if ('serviceWorker' in navigator) {
-    window.addEventListener('load', function() {
-      navigator.serviceWorker.register('/sw.js').then(function(registration) {
-        // Registration was successful
-        console.log('ServiceWorker registration successful with scope: ', registration.scope);
-      }, function(err) {
-        // registration failed :(
-        console.log('ServiceWorker registration failed: ', err);
+  <script src="/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+  <script type="text/javascript">
+    if ('serviceWorker' in navigator) {
+      window.addEventListener('load', function() {
+        navigator.serviceWorker.register('/sw.js').then(function(registration) {
+          // Registration was successful
+          console.log('ServiceWorker registration successful with scope: ', registration.scope);
+        }, function(err) {
+          // registration failed :(
+          console.log('ServiceWorker registration failed: ', err);
+        });
       });
-    });
-  }
-</script>
+    }
+  </script>
 <!--Built on <%=build_time.toLocaleString('ja-JP',{timeZone:"Asia/Tokyo"})+" JST"%>--->
 </body>
 </html>

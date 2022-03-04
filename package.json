@@ -8,6 +8,7 @@
   },
   "dependencies": {
     "@ngeojiajun/ejs-site-generator": "^5.1.0",
+    "highlight.js": "^11.4.0",
     "sync-request": "^6.1.0"
   }
 }

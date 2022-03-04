@@ -1,0 +1,17 @@
+###page_title
+Introduction to Fun With Programming Section
+###
+###page_description
+This page introduces the section.
+###
+###page_keywords
+Jia Jun Ngeo, Fun with programming, Programming
+###
+#####
+<div class="box">
+  This section shows some examples which the programming can be a challenging but fun thing to be done.
+  <p><b>Table of content:</b></p>
+  <ul>
+    <li><a href="/fun_with_programming/reflection-under-ue-4-27.html">Reflection under UE 4.27</a></li>
+  </ul>
+</div>

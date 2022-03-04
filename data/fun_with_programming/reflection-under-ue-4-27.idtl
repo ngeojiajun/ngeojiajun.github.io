@@ -1,0 +1,60 @@
+###page_title
+Reflection under Unreal Engine 4.27
+###
+###page_description
+This page shows some example on how to do the reflection under Unreal Engine
+###
+###page_keywords
+Jia Jun Ngeo, Fun with programming, Programming, UE 4.27, Reflection
+###
+###head_append
+<link rel="stylesheet" href="/css/hljs-atom-one-dark.min.css">
+###
+#####
+<div class="box">
+  In the daily development with the Unreal Engine (Version I am using is 4.27), it is always a situation that
+  we need to access the properties which are defined inside the blueprint. So I decided to note it down here:
+  <table>
+    <tr>
+      <td>
+        <div><b>1. Accessing UMG widgets which defined on the Blueprint child class</b></div>
+        Solution: <br>
+        use <span class="hljs">meta=(BindWidget)</span> UPROPERTY specifier when declaring the variable inside the
+        C++ parent.<br>
+        Example:
+        <pre class="hljs"><%-Interops.highlight("UPROPERTY(BlueprintReadOnly, meta = (BindWidget))\nclass UScaleBox* UI_BlockNameScaleBox;","C++")%></pre>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <div><b>2. Reading property from a Blueprint class</b></div>
+        Solution: <br>
+        To do this, the handle toward the property need to be obtained using either <span class="hljs">FindField</span>
+        or <span class="hljs">FindFieldChecked</span> and then actually read it using both the handle and the pointer to the instance.
+        <br>Example:
+        <pre class="hljs"><%-Interops.highlight(`FObjectProperty* prop=FindFieldChecked<FObjectProperty>(IDEWidgetClass, FName(TEXT("CloseButton")));
+IDECloseButton=Cast<UButton>(prop->GetObjectPropertyValue(prop->ContainerPtrToValuePtr<UObject>(IDEWidgetHandle)));`,"c++")%></pre>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <div><b>3. Writing to property inside a Blueprint</b></div>
+        Solution: <br>
+        Similar to reading the property, the handle toward the property need to be obtained using either <span class="hljs">FindField</span>
+        or <span class="hljs">FindFieldChecked</span> and then actually write to it using both the handle and the pointer to the instance.
+        <br>Example:
+        <pre class="hljs"><%-Interops.highlight(`FStrProperty* prop = FindFieldChecked<FStrProperty>(IDEDialogClass, FName(TEXT("Title")));
+prop->SetPropertyValue(prop->ContainerPtrToValuePtr<void*>(IDEDialogHandle), name /*some value*/);`,"c++");%></pre>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <div><b>4. Getting handle to the Blueprint class</b></div>
+        To get the <span class="hljs">UClass*</span> handle when the class name is known inside the constructor. Use the function <span class="hljs">ConstructorHelpers::FClassFinder&lt;ClassName&gt;</span>
+        <br>Example:
+        <pre class="hljs"><%-Interops.highlight(`static ConstructorHelpers::FClassFinder<UUserWidget> WidgetClassFinder(TEXT("/Game/UI/IDE/IDE.IDE_C"));
+IDEWidgetClass = WidgetClassFinder.Class;`,"c++")%></pre>
+      </td>
+    </tr>
+  </table>
+</div>

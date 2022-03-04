@@ -44,3 +44,7 @@ form.stretch input{
 div.box img.icon{
   height:100px;
 }
+.hljs{
+  word-break: break-all;
+  white-space: break-spaces;
+}

@@ -1,5 +1,6 @@
 const request = require('sync-request');
 const fs = require('fs');
+const hljs = require('highlight.js');
 const urls=[];
 const build_time=(new Date().getTime());
 exports.loadComments=function(){
@@ -47,3 +48,4 @@ exports.git_commit=function(){
     return ref;
   }
 }
+exports.highlight=(str,lang)=>hljs.highlight(str, {language: lang}).value
