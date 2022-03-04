@@ -38,11 +38,7 @@ jobs:
     if: ${{github.event_name == 'push'}}
     steps:
       - name: Wait for the deployment
-        uses: lewagon/wait-on-check-action@v1.0.0
-        with:
-          ref: 'refs/heads/gh-pages'
-          check-name: 'pages build and deployment'
-          repo-token: ${{ secrets.GITHUB_TOKEN }}
+        run: sleep 120
       - name: Google
         run: curl 'https://www.google.com/ping?sitemap=https%3A%2F%2Fngeojiajun.github.io%2Fsitemap.xml'
 #        - name: Bing
