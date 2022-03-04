@@ -1,6 +1,7 @@
 const request = require('sync-request');
 const fs = require('fs');
 const urls=[];
+const build_time=(new Date().getTime());
 exports.loadComments=function(){
   return JSON.parse(request('GET', process.env.COMMENTS_READ).getBody());
 }
@@ -24,6 +25,11 @@ exports.hooks={
 //since the tree always clean in CI so we can ignore the fact that the tree might be
 //modifed
 exports.git_commit=function(){
+  //This will scramble the ID when it is in development mode
+  if(process.env.IN_DEVELOPMENT_MODE){
+    console.warn("Returning current time instead of the commit id to avoid caching the data during the modification");
+    return build_time;
+  }
   //first check if the .git exists
   if(!fs.existsSync(".git")){
     //the PWD is not git repo
