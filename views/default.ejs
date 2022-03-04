@@ -12,15 +12,15 @@ function include_external_tagging(){
 }
 function generateLink(name,path){
   if(path=="index"){
-    path=""
+    actualPath=""
   }
   else if(path.endsWith("index")){
-    path=path.replace(/\/index$/i,"/");
+    actualPath=path.replace(/\/index$/i,"/");
   }
   else{
-    path+=".html";
+    actualPath=path+".html";
   }
-  return `<a class="nav-link ${page_unit_path==path?"active":""}" aria-current="page" href="/${path}">${name}</a>`;
+  return `<a class="nav-link ${page_unit_path==path?"active":""}" aria-current="page" href="/${actualPath}">${name}</a>`;
 }
 _%>
 <!doctype html>
