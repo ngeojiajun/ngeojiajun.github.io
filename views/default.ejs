@@ -11,7 +11,16 @@ function include_external_tagging(){
   }
 }
 function generateLink(name,path){
-  return `<a class="nav-link ${page_unit_path==path?"active":""}" aria-current="page" href="/${path}.html">${name}</a>`;
+  if(path=="index"){
+    path=""
+  }
+  else if(path.endsWith("index")){
+    path=path.replace(/\/index$/i,"/");
+  }
+  else{
+    path+=".html";
+  }
+  return `<a class="nav-link ${page_unit_path==path?"active":""}" aria-current="page" href="/${path}">${name}</a>`;
 }
 _%>
 <!doctype html>
@@ -43,7 +52,7 @@ _%>
 <body>
   <nav class="navbar navbar-expand-lg navbar-light bg-light">
     <div class="container-fluid">
-      <a class="navbar-brand" href="#">Ngeo Jia Jun's Site</a>
+      <a class="navbar-brand" href="/">Ngeo Jia Jun's Site</a>
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>

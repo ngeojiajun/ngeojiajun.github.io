@@ -8,7 +8,7 @@ exports.hooks={
   new_page:function(name){
     //site root exclude
     if(name=="index.html")return;
-    if(name.endsWith("index.html"))name.replace(/\/index\.html/i,"/");
+    if(name.endsWith("index.html"))name=name.replace(/\/index\.html$/i,"/");
     urls.push(name);
   },
   build_done:function(){
