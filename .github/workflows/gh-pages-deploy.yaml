@@ -40,7 +40,7 @@ jobs:
       - name: Wait for the deployment
         uses: lewagon/wait-on-check-action@v1.0.0
         with:
-          ref: ${{ github.ref }}
+          ref: 'refs/heads/gh-pages'
           check-name: 'pages build and deployment'
           repo-token: ${{ secrets.GITHUB_TOKEN }}
       - name: Google
