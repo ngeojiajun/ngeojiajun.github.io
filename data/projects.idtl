@@ -44,7 +44,9 @@ Jia Jun Ngeo, Projects
     game is simple, collect nodes as much as possible while avoiding the bombs. This game make use of the CanvasRenderingContext2D
     API in rendering the scene. The entire game rendering are completely done through the JavaScript. HTML and CSS are
     used merely to provide the hosting for the canvas. Through the entire development process, the proper error handing has
-    been the most critical part in order the ensure the good user experience. The development finished within a month.
+    been the most critical part in order the ensure the good user experience. The development finished within a month. The game is currently hosted on
+    <a href="https://greatkidshow.netlify.app/games/2" target="_blank">https://greatkidshow.netlify.app/games/2</a>. The source code is available on
+    <a href="https://github.com/yuuchin/GreatKidsShow/tree/main/public/games-embed/snakes-and-ladders" target="_blank">GitHub</a>
     <br>
     <img src="/imgs/game-menu.png" alt="Screenshot of Game menu">
     <img src="/imgs/game-screen.png" alt="Screenshot of Game screen">
@@ -56,5 +58,13 @@ Jia Jun Ngeo, Projects
     The final goal for the game is just bring the ball to the goal.
     <br>
     <img src="/imgs/programming_maze_wip.png" alt="Screenshot of the Game">
+  </details>
+  <details>
+    <summary>Great Kids Show</summary>
+    This is the home page created within a team of 5. My contribution toward the project is the backend of the site.
+    Currently the website is live <a href="https://greatkidshow.netlify.app/" target="_blank">here</a>. and the GitHub repository is
+    available <a href="https://github.com/yuuchin/GreatKidsShow" target="_blank">here</a>
+    <br>
+    <img src="/imgs/greatkitshows-home.png" alt="Screenshot of the Site">
   </details>
 </div>
