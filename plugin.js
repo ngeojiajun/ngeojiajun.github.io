@@ -15,9 +15,10 @@ exports.hooks={
   },
   build_done:function(){
     //xml version
+    const build_date=new Date();
     let base=`<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n`;
     urls.unshift("");
-    base+=urls.map(e=>`<url>\n<loc>https://ngeojiajun.github.io/${e}</loc>\n</url>`).join("\n");
+    base+=urls.map(e=>`<url>\n<loc>https://ngeojiajun.github.io/${e}</loc>\n<date>${build_date.getFullYear()}-${build_date.getMonth()+1}-${build_date.getDate()}</date>\n<priority>1.0</priority>\n</url>`).join("\n");
     base+="\n</urlset>";
     fs.writeFileSync("./out/sitemap.xml",base);
   }
