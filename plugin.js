@@ -20,7 +20,7 @@ exports.hooks={
     urls.unshift("");
     base+=urls.map(e=>`<url>
 <loc>https://ngeojiajun.github.io/${e}</loc>
-<lastmoad>${build_date.getFullYear()}-${String(build_date.getMonth()+1).padStart(2,0)}-${String(build_date.getDate()).padStart(2,0)}</lastmod>
+<lastmod>${build_date.getFullYear()}-${String(build_date.getMonth()+1).padStart(2,0)}-${String(build_date.getDate()).padStart(2,0)}</lastmod>
 <priority>1.0</priority>
 </url>`).join("\n");
     base+="\n</urlset>";
