@@ -52,10 +52,10 @@ Jia Jun Ngeo, Projects
     <img src="/imgs/game-screen.png" alt="Screenshot of Game screen">
   </details>
   <details>
-    <summary>Programming Maze (WIP)</summary>
+    <summary>Programming Maze</summary>
     This is the game that created as the submmision for the Final Year Project for my degree program. The main theme for this game is to put
     players' problem solving and state management skill. Players are expected to move the action blocks to the slot at the left and run it.
-    The final goal for the game is just bring the ball to the goal.
+    The final goal for the game is just bring the ball to the goal. The source code is available upon request.
     <br>
     <img src="/imgs/programming_maze_wip.png" alt="Screenshot of the Game">
   </details>
