@@ -46,7 +46,7 @@ Jia Jun Ngeo, Projects
     used merely to provide the hosting for the canvas. Through the entire development process, the proper error handing has
     been the most critical part in order the ensure the good user experience. The development finished within a month. The game is currently hosted on
     <a href="https://greatkidshow.netlify.app/games/2" target="_blank">https://greatkidshow.netlify.app/games/2</a>. The source code is available on
-    <a href="https://github.com/yuuchin/GreatKidsShow/tree/main/public/games-embed/snakes-and-ladders" target="_blank">GitHub</a>
+    <a href="https://github.com/yuuchin/GreatKidsShow/tree/main/public/games-embed/music-rush" target="_blank">GitHub</a>
     <br>
     <img src="/imgs/game-menu.png" alt="Screenshot of Game menu">
     <img src="/imgs/game-screen.png" alt="Screenshot of Game screen">
@@ -66,5 +66,11 @@ Jia Jun Ngeo, Projects
     available <a href="https://github.com/yuuchin/GreatKidsShow" target="_blank">here</a>
     <br>
     <img src="/imgs/greatkitshows-home.png" alt="Screenshot of the Site">
+  </details>
+  <details>
+    <summary>ACG API/summary>
+    This is a small NodeJS based api project to train my skillset in writing the robost api backend using typescript and express.
+    Its source code is available <a href="https://github.com/ngeojiajun/acg-api"> here </a> <br/>
+    Note: Commits by @junchan-deriv is the commits done using my work account
   </details>
 </div>
