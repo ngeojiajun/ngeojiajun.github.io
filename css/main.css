@@ -1,0 +1,50 @@
+:root{
+  --main-background:rgb(237, 197, 235);
+  --link-color:#3a00ff;
+}
+body{
+  background-image: url("/imgs/code-background.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+div.box{
+  border: black solid 1px;
+  background:var(--main-background);
+  margin-bottom:30px;
+  padding:10px;
+}
+div.box a{
+  color: var(--link-color);
+}
+div.box img{
+  max-width:90%;
+  max-height:250px;
+  width: auto;
+  height: auto;
+  margin:15px;
+}
+table td{
+  border: black solid 2px;
+  padding:5px;
+}
+details{
+  border: black solid 1px;
+  background:var(--main-background);
+  margin-bottom:30px;
+  padding:10px;
+}
+details summary{
+  margin-bottom:5px;
+}
+/**comment page*/
+form.stretch input{
+  width:100%;
+}
+/*icon under box*/
+div.box img.icon{
+  height:100px;
+}
+.hljs{
+  word-break: break-all;
+  white-space: break-spaces;
+}
