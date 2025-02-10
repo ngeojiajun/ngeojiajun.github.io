@@ -3,8 +3,8 @@ on:
   push:
     branches:
       - master
-  schedule:
-    - cron: '30 0,8,16 * * *'
+  # schedule:
+  #   - cron: '30 0,8,16 * * *'
 jobs:
   build-ejs-site:
     runs-on: ubuntu-latest
@@ -20,9 +20,9 @@ jobs:
         run: npm install --loglevel verbose
       - name: Generating the pages
         run: npm run build
-        env:
-          COMMENTS_READ: ${{ secrets.COMMENTS_READ }}
-          COMMENTS_WRITE: ${{ secrets.COMMENTS_WRITE }}
+        # env:
+        #   COMMENTS_READ: ${{ secrets.COMMENTS_READ }}
+        #   COMMENTS_WRITE: ${{ secrets.COMMENTS_WRITE }}
       - name: Deploy
         uses: crazy-max/ghaction-github-pages@v2
         with:
